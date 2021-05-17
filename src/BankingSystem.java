@@ -7,6 +7,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
 /**
  *
  * @author Administrator
@@ -190,7 +191,7 @@ public class BankingSystem {
         
         // Save Account into csv database
         DatabaseCSV database = new DatabaseCSV();
-        database.savingAcc(newAccount, newClient, accType);
+        database.savingAcc(newAccount, newClient, accType , balance);
 
     }
 
