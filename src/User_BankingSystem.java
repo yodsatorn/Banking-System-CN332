@@ -6,7 +6,16 @@
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 /**
  *
@@ -16,12 +25,58 @@ public class User_BankingSystem {
 
     static ArrayList<Client> allClients;
     static ArrayList<BankAccount> allAccounts;
-    static Scanner input;
+    static Scanner input;    private String name;
+    private String address;
+    private String phone;
+    private double balance;
+    private String password;
+    private int i ;
 
     public User_BankingSystem() {
         allAccounts = new ArrayList<BankAccount>();
         allClients = new ArrayList<Client>();
         input = new Scanner(System.in);
+        List<String> lines = new ArrayList<>();
+        try {
+        BufferedReader reader = new BufferedReader(new FileReader("AccountDataBase.csv"));
+        String line = null;
+        while ((line = reader.readLine()) != null) {
+            lines.add(line);
+        }
+        reader.close();
+        }
+        catch (IOException e) {
+            System.out.println("Exception caught:Division by zero");
+        }
+
+        
+        for ( i = 0 ; i < lines.size() ; i++)
+        {
+        String[] array = lines.get(i).split(",");
+        System.out.println(array.length);
+        name = array[1];
+        address = array[2];
+        phone = array[3];
+        password = array[4];
+        balance = Double.parseDouble(array[6]);
+        Client newClient = new Client(name, address, phone, password);
+        BankAccount newAccount = null;
+
+        if (array[5].equals("Basic Bank Account"))
+        {
+            newAccount = new BankAccount(balance);
+        }
+        else
+        {
+            newAccount = new SavingsBankAccount(balance);
+        }
+        newAccount.setOwner(newClient);
+        newClient.setAccount(newAccount);
+        allAccounts.add(newAccount);
+        allClients.add(newClient);
+        
+        }
+
         
         while (true) {
             System.out.println("1- withdraw");

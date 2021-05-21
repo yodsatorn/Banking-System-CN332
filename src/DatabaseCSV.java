@@ -10,6 +10,7 @@ public class DatabaseCSV implements DatabaseCSVInterface{
     private String phone;
     private double balance;
     private String accountType;
+    private String password;
    
     
     public void savingAcc(BankAccount bankAcc, Client clientAcc, int accType ,double balance) {
@@ -18,6 +19,7 @@ public class DatabaseCSV implements DatabaseCSVInterface{
         address = clientAcc.getAddress();
         phone = clientAcc.getPhone();
         balance = bankAcc.getBalance();
+        password = clientAcc.getPassword();
         if(accType == 1){
             accountType = "Basic Bank Account";
         } else {
@@ -28,7 +30,7 @@ public class DatabaseCSV implements DatabaseCSVInterface{
         FileWriter writer;
         try {
             writer = new FileWriter(file,true);
-            String savingInfo = String.format("%d,%s,%s,%s,%s,%f\r\n", bankAccID,name,address,phone,accountType,balance);
+            String savingInfo = String.format("%d,%s,%s,%s,%s,%s,%f\r\n", bankAccID,name,address,phone,password,accountType,balance);
             writer.write(savingInfo);
             writer.close();
             System.out.println("Database updated");
