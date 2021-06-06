@@ -27,6 +27,7 @@ This repository is created for CN332's Project.
 
 # Demo Video
 
+[Demo video Banking system](https://youtu.be/1Y0VGtMgUJY)
 
 ---
 
