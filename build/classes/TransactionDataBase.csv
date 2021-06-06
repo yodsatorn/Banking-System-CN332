@@ -1,0 +1,4 @@
+0,withdraw,1.0,balance: 122.0
+0,withdraw,2.0,balance: 120.0
+0,withdraw,123.0,balance: 0.0
+0,deposit,123.0,balance: 246.0

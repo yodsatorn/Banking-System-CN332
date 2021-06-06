@@ -46,7 +46,7 @@ public class User_BankingSystem {
         reader.close();
         }
         catch (IOException e) {
-            System.out.println("Exception caught:Division by zero");
+            System.out.println("");
         }
 
         
@@ -82,6 +82,7 @@ public class User_BankingSystem {
             System.out.println("1- withdraw");
             System.out.println("2- deposit");
             System.out.println("3- exit");
+            System.out.print("Please enter your order : ");
             int option = input.nextInt();
             if (option == 1) {
                 withdraw();

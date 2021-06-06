@@ -47,6 +47,7 @@ public class BankingSystem {
             System.out.println("5- withdraw");
             System.out.println("6- deposit");
             System.out.println("7- exit");
+            System.out.print("Please enter your order : ");
             int option = input.nextInt();
             List<String> lines = new ArrayList<>();
             try {

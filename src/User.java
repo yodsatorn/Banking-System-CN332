@@ -21,6 +21,7 @@ public class User {
             System.out.println("1- Admin");
             System.out.println("2- User");
             System.out.println("3- exit");
+            System.out.print("please enter your role: ");
             int option = input.nextInt();
             if (option == 1) {
                 new BankingSystem();
