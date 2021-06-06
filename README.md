@@ -16,12 +16,12 @@ This repository is created for CN332's Project.
 
 
 
+
 ---
 
 # Class Diagram
 
-
-
+![cn332-pattern](https://user-images.githubusercontent.com/60430405/120930803-0c55ee00-c719-11eb-8c09-167164e651be.jpg)
 
 ---
 
