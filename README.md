@@ -6,6 +6,7 @@
 - [Class Diagram](#Class-Diagram)
 - [Design Pattern](#Design-Pattern)
 - [Demo Video](#Demo-Video)
+- [Reference code](#Reference-code)
 - [Contributor](#Contributor)
 
 ---
@@ -40,6 +41,15 @@ This project is a simulation of the banking system. In terms of writing algorith
 # Demo Video
 
 - [Demo video Banking system](https://youtu.be/1Y0VGtMgUJY)
+
+
+---
+
+# Reference code
+
+We use this repository for our project and applied design pattern to it.
+
+- [Banking-System](https://github.com/AbdelrhmanVenTo/Banking-System)
 
 ---
 
